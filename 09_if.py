@@ -1,14 +1,14 @@
-def where2eat(mood, money) :
+def where2eat(mood, money):
     eatAt = ""
-    if mood == "good" and float(money)>100 :
+    if mood == "good" and float(money) > 100:
         eatAt = "mamak"
-    elif mood=="bad" and float(money)>= 80 :
+    elif mood == "bad" and float(money) >= 80:
         eatAt = "mcd"
-    elif mood == "good" or float(money) < 80 :
+    elif mood == "good" or float(money) < 80:
         eatAt = "steamboat"
-    elif mood != "good" and not(float(money) < 100) :
+    elif mood != "good" and not (float(money) < 100):
         eatAt = "buffet"
-    else :
+    else:
         eatAt = "home"
 
     return eatAt
@@ -16,4 +16,4 @@ def where2eat(mood, money) :
 
 a = input("mood good?")
 b = input("how much you have?")
-print(where2eat(a,b))
+print(where2eat(a, b))
