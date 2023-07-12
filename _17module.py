@@ -1,6 +1,6 @@
 #get other page function.
 
-a = __import__('08_function')
+import _08function
 import token
 import sys
 
