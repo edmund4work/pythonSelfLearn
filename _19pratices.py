@@ -1,5 +1,5 @@
 # import _19apraticesQuestion #import all file
-from _19apraticesQuestion import  Questions01#import only the function in the file
+from _19apraticesQuestion import  Questions01 #import only the function in the file
 
 
 test = [
@@ -10,7 +10,18 @@ test = [
 # print (test[0]) 
 
 questions = [
-    Questions01(test[0],'A'),
-    Questions01(test[1],'B'),
-    Questions01(test[2],'C'),
+    Questions01(test[0],"A"),
+    Questions01(test[1],"B"),
+    Questions01(test[2],"C"),
 ]
+
+def run_test(questions):
+    score = 0
+    for question in questions:
+        asnwer = input(question.description)
+        if(asnwer == question.answer):
+            score += 1
+        
+    print ("you get :" + str(score) + ". total questions: " + str(len(questions)))
+
+run_test(questions)
